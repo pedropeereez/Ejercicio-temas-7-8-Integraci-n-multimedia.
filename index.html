@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio de Pedro Pérez Fernández</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="index">
+
+  <!-- Modal audio de fondo -->
+  <div class="modal fade" id="audioModal" tabindex="-1" aria-labelledby="audioModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="audioModalLabel">Activar audio de fondo (omitido)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          En esta prática el audio esta omitido.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="logo"><a href="index.html" aria-label="Ir al inicio"><span>P</span><span>e</span><span>d</span><span>r</span><span>o</span><span>P</span></a></div>
+    <nav>
+      <a href="Sobremi.html">Sobre mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="formulario.html">Formulario de Contacto</a>
+      <a href="linkedlin.html">LinkedIn</a>
+      <a href="github.html">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <div class="tarjeta">
+      <div class="fila">
+        <div class="col-principal">
+          <div class="perfil">
+            <h1 class="titulo-busqueda"><a href="Sobremi.html">Pedro Pérez Fernández</a></h1>
+            <p class="bio">Mi portfolio</p>
+          </div>
+
+          <ul class="secciones">
+            <li><a href="Sobremi.html"><div class="izquierda"><span class="etiqueta">Sobre Mí</span><span class="subtexto">Soy estudiante de Desarrollo de Aplicaciones Web en MEDAC DAVANTE Sevilla Este...</span></div><span class="flecha">›</span></a></li>
+            <li><a href="proyectos.html"><div class="izquierda"><span class="etiqueta">Proyectos</span><span class="subtexto">Proyecto 1 — Classic XI</span></div><span class="flecha">›</span></a></li>
+            <li><a href="formulario.html"><div class="izquierda"><span class="etiqueta">Formulario de Contacto</span><span class="subtexto">Rellena el formulario y te contestaré en menos de 48 horas.</span></div><span class="flecha">›</span></a></li>
+            <li><a href="linkedlin.html"><div class="izquierda"><span class="etiqueta">LinkedIn</span><span class="subtexto">www.linkedin.com/in/pedro-perez-6b1744349</span></div><span class="flecha">›</span></a></li>
+            <li><a href="github.html"><div class="izquierda"><span class="etiqueta">GitHub</span><span class="subtexto">github.com/pedropeereez</span></div><span class="flecha">›</span></a></li>
+          </ul>
+        </div>
+  <aside class="col-lateral"><img src="imagenes/fotomia.png" alt="Foto" class="foto-mia"></aside>
+      </div>
+    </div>
+  </main>
+  <footer class="pie">© 2025 Pedro Pérez Fernández. Todos los derechos reservados.</footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var audioModal = new bootstrap.Modal(document.getElementById('audioModal'))
+      audioModal.show()
+    })
+  </script>
+</body>
+</html>
+
+

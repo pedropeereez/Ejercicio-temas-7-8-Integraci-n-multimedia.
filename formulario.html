@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto - Pedro Pérez Fernández</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="sobremi">
+  <header class="site-header">
+    <div class="cabecera-interior">
+      <div class="logo"><a href="index.html"
+          aria-label="Ir al inicio"><span>P</span><span>e</span><span>d</span><span>r</span><span>o</span><span>P</span></a>
+      </div>
+      <div class="busqueda-contenedor">
+        <div class="caja-busqueda" role="search"><input type="search" placeholder="Buscar en PedroP"
+            aria-label="Buscar">
+          <div class="busqueda-derecha"><button class="mic" aria-hidden="true"></button><button class="lens"
+              aria-hidden="true"></button></div>
+        </div>
+      </div>
+      <div class="iconos-derecha"><button class="apps" aria-hidden="true">◻︎</button>
+        <div class="avatar">P</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="subnav">
+    <a href="Sobremi.html">Sobre Mí</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="formulario.html" class="active">Formulario de Contacto</a>
+    <a href="linkedlin.html">LinkedIn</a>
+    <a href="github.html">GitHub</a>
+  </nav>
+
+  <main class="contenido">
+    <article class="resultado">
+      <div class="resultado-contenido">
+        <h2 class="resultado-titulo"><a href="formulario.html">Formulario de Contacto</a></h2>
+        <div class="resultado-url">https://www.pedroperez.dev › contacto</div>
+        <p class="resultado-descripcion">Rellena el formulario y te contestaré en menos de 48 horas. También puedes
+          contactarme por LinkedIn.</p>
+
+        <form class="formulario-contacto" id="contactForm" onsubmit="return false;">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" class="entrada" placeholder="Tu nombre" required>
+          <small id="nameError" class="form-error" style="display:none;color:#d32f2f;font-size:12px;">El nombre es
+            obligatorio (mín. 2 caracteres).</small>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" class="entrada" placeholder="tu@correo.com" type="email" required>
+          <small id="emailError" class="form-error" style="display:none;color:#d32f2f;font-size:12px;">Email
+            inválido.</small>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" class="area-texto" placeholder="Escribe tu mensaje aquí..."
+            required></textarea>
+          <small id="messageError" class="form-error" style="display:none;color:#d32f2f;font-size:12px;">El mensaje es
+            obligatorio (mín. 10 caracteres).</small>
+
+          <div style="margin-top:8px"><button type="button" id="sendBtn" class="btn-enviar">Enviar</button></div>
+          <div id="successMessage"
+            style="display:none;margin-top:8px;padding:10px;background:#4caf50;color:white;border-radius:4px;font-size:14px;">
+            ✓ Mensaje enviado correctamente. Nos pondremos en contacto pronto.</div>
+
+          <div style="margin-top:10px;font-size:13px;color:#5f6368">También puedes contactarme por LinkedIn: <a
+              href="https://www.linkedin.com/in/pedro-perez-6b1744349" target="_blank"
+              rel="noreferrer">www.linkedin.com/in/pedro-perez-6b1744349</a></div>
+        </form>
+
+        <!-- Video presentación -->
+        <section class="video-section" style="margin-top:18px">
+          <h3>Video-presentación</h3>
+          <div class="video-container">
+            <video id="presentacionVideo" class="responsive-video" width="640" height="360"
+              poster="imagenes/fotomia.png" preload="metadata" controls>
+              <source src="multimedia/presentacion.mp4" type="video/mp4">
+              <source src="multimedia/presentacion.webm" type="video/webm">
+              <source src="multimedia/presentacion.ogv" type="video/ogg">
+              Tu navegador no soporta vídeo HTML5. Por favor, actualiza el navegador o descarga el vídeo.
+            </video>
+
+            <div class="custom-controls" aria-hidden="false">
+              <button id="btnPlay" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Reproducir vídeo">Reproducir presentación</button>
+              <button id="btnPause" class="btn btn-secondary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Pausar vídeo">Pausar</button>
+              <button id="btnToggleLoop" class="btn btn-outline-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="Alternar repetición">Loop: <span id="loopState">off</span></button>
+              <button id="btnToggleControls" class="btn btn-outline-secondary btn-sm" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="Mostrar/ocultar controles nativos">Controles nativos</button>
+            </div>
+
+            <p style="margin-top:8px;font-size:13px;color:#5f6368">Video presentación.</p>
+          </div>
+
+          <p>
+            <a class="btn btn-link" data-bs-toggle="collapse" href="#multimediaInfo" role="button" aria-expanded="false"
+              aria-controls="multimediaInfo">Más información multimedia</a>
+          </p>
+          <div class="collapse" id="multimediaInfo">
+            <div class="card card-body">
+              <p contenteditable="true">Controles video:</p>
+              <div hidden id="hiddenNote">Nota oculta: aquí puedes poner metadatos que no aparecen inicialmente.</div>
+              <ul>
+                <li>Reproducir presentación: Inicia el video.</li>
+                <li>Pausar: Pausa el video.</li>
+                <li>Loop: Activa la repetición automática.</li>
+                <li>Controles nativos: Mostrar/ocultar controles nativos del navegador.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="pie">© 2025 Pedro Pérez Fernández. Todos los derechos reservados.</footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Inicializar tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      tooltipTriggerList.map(function (el) { return new bootstrap.Tooltip(el) })
+
+      // Control del vídeo
+      var video = document.getElementById('presentacionVideo')
+      var btnPlay = document.getElementById('btnPlay')
+      var btnPause = document.getElementById('btnPause')
+      var btnToggleLoop = document.getElementById('btnToggleLoop')
+      var loopState = document.getElementById('loopState')
+      var btnToggleControls = document.getElementById('btnToggleControls')
+
+      btnPlay.addEventListener('click', function () { video.play() })
+      btnPause.addEventListener('click', function () { video.pause() })
+      btnToggleLoop.addEventListener('click', function () {
+        video.loop = !video.loop
+        loopState.textContent = video.loop ? 'on' : 'off'
+      })
+      btnToggleControls.addEventListener('click', function () {
+        video.controls = !video.controls
+      })
+
+      // Validación del formulario
+      var form = document.getElementById('contactForm')
+      var nameInput = document.getElementById('name')
+      var emailInput = document.getElementById('email')
+      var messageInput = document.getElementById('message')
+      var sendBtn = document.getElementById('sendBtn')
+      var successMessage = document.getElementById('successMessage')
+
+      function validateForm() {
+        var isValid = true
+        var nameError = document.getElementById('nameError')
+        var emailError = document.getElementById('emailError')
+        var messageError = document.getElementById('messageError')
+
+        // Validar nombre
+        if (nameInput.value.trim().length < 2) {
+          nameError.style.display = 'block'
+          isValid = false
+        } else {
+          nameError.style.display = 'none'
+        }
+
+        // Validar email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(emailInput.value.trim())) {
+          emailError.style.display = 'block'
+          isValid = false
+        } else {
+          emailError.style.display = 'none'
+        }
+
+        // Validar mensaje
+        if (messageInput.value.trim().length < 10) {
+          messageError.style.display = 'block'
+          isValid = false
+        } else {
+          messageError.style.display = 'none'
+        }
+
+        return isValid
+      }
+
+      sendBtn.addEventListener('click', function () {
+        if (validateForm()) {
+          successMessage.style.display = 'block'
+          form.reset()
+          setTimeout(function () {
+            successMessage.style.display = 'none'
+          }, 4000)
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
